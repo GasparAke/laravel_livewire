@@ -1,0 +1,22 @@
+<div>
+    <div class="row layout-top-spacing mt-4">
+
+        <div class="col-sm-12 col-md-6">
+            <div class="widget widget-chart one">
+                <h4 class="p-3 text-center text-theme-1 font-bold">TOP 5 MÁS VENDIDOS</h4>
+                <div id="chartTop5"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <div class="widget widget-chart one">
+                <h4 class="p-3 text-center text-theme-1 font-bold">VENTAS DE LA SEMANA</h4>
+                <div id="areaChart"></div>
+            </div>
+        </div>
+
+    </div>
+
+    @include('livewire.dashboard.script')
+
+</div>
