@@ -15,6 +15,9 @@ use App\Models\Sale;
 use App\Models\User;
 use DB;
 use App\Traits\CartTrait;
+use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
+use Mike42\Escpos\Printer;
+use Mike42\Escpos\EscposImage;
 
 class Pos extends Component
 {
@@ -140,6 +143,19 @@ class Pos extends Component
                     $product = Product::find($item->id);
                     $product->stock = $product->stock - $item->quantity;
                     $product->save();
+                    $nombreImpresora = "POS-58";
+// $connector = new WindowsPrintConnector($nombreImpresora);
+// $impresora = new Printer($connector);
+// $impresora->setJustification(Printer::JUSTIFY_CENTER);
+// $impresora->setTextSize(2, 2);
+// $impresora->text("Imprimiendo\n");
+// $impresora->text("ticket\n");
+// $impresora->text("desde\n");
+// $impresora->text("Laravel\n");
+// $impresora->setTextSize(1, 1);
+// $impresora->text("https://parzibyte.me");
+// $impresora->feed(5);
+// $impresora->close();    
                 }
             }
 
@@ -151,18 +167,20 @@ class Pos extends Component
             $this->total = Cart::getTotal();
             $this->itemsQuantity = Cart::getTotalQuantity();
             $this->emit('sale-ok', 'VENTA REGISTRADA CON EXITO, REVISA TU TICKET DE VENTA');
-            $this->emit('print-ticket', $sale->id);
+            // $this->emit('print-ticket', $sale->id);
 
         } catch (Exception $e) {
             DB::rollback();
             $this->emit('sale-error', $e->getMessage());
         }
+        
     }
+  
 
-    public function printTicket($sale)
-    {
-       return Redirect::to("print//$sale->id");
-    }
+    // public function printTicket($sale)
+    // {
+    //    return Redirect::to("print//$sale->id");
+    // }
 
    
 }

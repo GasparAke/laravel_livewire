@@ -38,6 +38,7 @@ class Products extends Component
         ->select('products.*','c.name as category')
         ->where('products.name', 'like', '%' . $this->search . '%')
         ->orWhere('products.barcode', 'like', '%' . $this->search . '%')
+        ->orWhere('products.price', 'like', '%' . $this->search . '%')
         ->orWhere('c.name', 'like', '%' . $this->search . '%')
         ->orderBy('products.name','asc')
         ->paginate($this->pagination);

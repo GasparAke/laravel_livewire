@@ -1,3 +1,4 @@
+@can('Asignar_Permisos')
 <div class="row sales layout-top-spacing">
     <div class="col-sm-12">
         <div class="widget widget-chart-one">
@@ -117,3 +118,4 @@ Include Form
 
 
 </script>
+@endcan

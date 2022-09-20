@@ -6,10 +6,12 @@
                     <b>{{ $componentName }} | {{ $pageTitle }}</b>
                 </h4>
                 <ul class="tabs tab-pills">
+                @can('Usuario_Crear')
                     <li>
                         <a href="javascript:void(0)" class="tabmenu bg-dark" data-toggle="modal" data-target="
                         #theModal">Agregar</a>
                     </li>
+                    @endcan
                 </ul>
             </div>
             @include('common.searchbox')
@@ -25,7 +27,7 @@
                                     <th class="table-th text-white text-center">EMAIL</th>
                                     <th class="table-th text-white text-center">ESTATUS</th>
                                     <th class="table-th text-white text-center">PERFIL</th>
-                                    <th class="table-th text-white text-center">IMAGEN</th>
+                                    <!-- <th class="table-th text-white text-center">IMAGEN</th> -->
                                     <th class="table-th text-white text-center">ACTIONS</th>
                                 </tr>
                             </thead>
@@ -40,25 +42,28 @@
                                         text-uppercase">{{$r->status}}</span>
                                     </td>
                                     <td class="text-center text-uppercase"><h6>{{$r->profile}}</h6></td>
-                                    <td class="text-center">
+                                    <!-- <td class="text-center">
                                         @if($r->image !=null)
                                         <img src="{{ asset('storage/users/' . $r->image ) }}" alt="imagen" class="card-img-top
                                         img-fluid">
                                         @endif
-                                    </td>
+                                    </td> -->
 
                                     <td class="text-center">
+                                    @can('Usuario_Editar')
                                         <a href="javascript:void(0)" 
                                         wire:click="edit({{$r->id}})"
                                         class="btn btn-dark mtmobile" title="Edit">
                                             <i class="fas fa-edit"></i>
                                         </a>
-
+                                        @endcan
+                                        @can('Usuario_Eliminar')
                                         <a href="javascript:void(0)" 
                                         onclick="Confirm('{{$r->id}}')"
                                         class="btn btn-dark " title="Delete">
                                             <i class="fas fa-trash"></i>
                                         </a>
+                                        @endcan
                                     </td>
                                 </tr>
                                 @endforeach

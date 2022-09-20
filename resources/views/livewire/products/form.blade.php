@@ -25,7 +25,7 @@
 <div class="col-sm-12 col-md-4">
     <div class="form-group">
         <label>Costo</label>
-        <input type="text" data-type='currency' wire:model.lazy="cost" class="form-control" placeholder="ej: 121">
+        <input type="number" data-type='number' wire:model.lazy="cost" class="form-control" placeholder="ej: 1212">
         @error('cost') <span class="text-danger er">{{$message}}</span>@enderror
     </div>
 </div>
@@ -33,7 +33,7 @@
 <div class="col-sm-12 col-md-4">
     <div class="form-group">
         <label>Precio</label>
-        <input type="text" data-type='currency' wire:model.lazy="price" class="form-control" placeholder="ej: 121">
+        <input type="number" data-type='number' wire:model.lazy="price" class="form-control" placeholder="ej: 1212">
         @error('price') <span class="text-danger er">{{$message}}</span>@enderror
     </div>
 </div>

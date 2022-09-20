@@ -4,10 +4,10 @@
             <i class="fas fa-search"></i>
             Buscar Productos
         </button>
-        <button wire:click="printLast" class="btn btn-dark mr-3">
+        <!-- <button wire:click="printLast" class="btn btn-dark mr-3">
             <i class="fas fa-search"></i>
             Reimprimir Ultima Venta F7
-        </button>
+        </button> -->
     </div>
 </div>
 

@@ -1,3 +1,4 @@
+@can('Vista_CorteDeCaja')
 <div class="row sales layout-top-spacing">
     <div class="col-sm-12">
         <div class="widget widget-chart-one">
@@ -42,8 +43,8 @@
                         class="btn btn-dark">Consultar</button>
                         @endif
                         @if($total > 0)
-                        <button wire:click.prevent="Print()" type="button"
-                        class="btn btn-dark">Imprimir</button>
+                        <!-- <button wire:click.prevent="Print()" type="button"
+                        class="btn btn-dark">Imprimir</button> -->
                         @endif
                     </div>
                 </div>
@@ -63,7 +64,7 @@
                             <tr>
                                 <th class="table-th text-center text-white">FOLIO</th>
                                 <th class="table-th text-center text-white">TOTAL</th>
-                                <th class="table-th text-center text-white">ITEMS</th>
+                                <th class="table-th text-center text-white">ELEMENTOS</th>
                                 <th class="table-th text-center text-white">FECHA</th>
                                 <th class="table-th text-center text-white"></th>
                             </tr>
@@ -104,3 +105,4 @@
         })
     })
 </script>
+@endcan

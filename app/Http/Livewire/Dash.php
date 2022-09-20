@@ -50,21 +50,7 @@ class Dash extends Component
 
     public function getWeekSales()
     {
-        $dt = new DateTime();
-        $startDate = null;
-        $finishDate = null;
-
-
-        for ($d=1; $d <=7 ; $d++) { 
-            // norma iso  //año/mes/dia
-            $dt->setISODate($dt->format('o'), $dt->format('W'), $d);
-
-            $startDate = $dt->format('YYYY-MM-DD-') . '00:00:00';
-            $finishDate = $dt->format('YYYY-MM-DD-') . '23:59:59';
-            $wsale = Sale::whereBetween('created_at', [$startDate, $finishDate])->sum('total');
-            array_push($this->weekSales_Data, $wsale);
-
-        }
+        $sales = Sale::whereMonth('created_at', now()->month(8))->get();
     }
     
 }

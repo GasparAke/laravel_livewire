@@ -6,11 +6,13 @@
                     <b>{{$componentName}} | {{$pageTitle}}</b>
                 </h4>
                 <ul class="tabs tab-pills">
+                @can('Producto_Crear')
                     <li>
                         <a href="javascript:void(0)" class="tabmenu bg-dark" data-toggle="modal" 
                         data-target="
                         #theModal">Agregar</a>
                     </li>
+                    @endcan
                 </ul>
             </div>
             @include('common.searchbox')
@@ -25,10 +27,10 @@
                                     <th class="table-th text-white text-center">CODIGO DE BARRAS</th>
                                     <th class="table-th text-white text-center">CATEGORIA</th>
                                     <th class="table-th text-white text-center">PRECIO</th>
-                                    <th class="table-th text-white text-center">STOCK</th>
-                                    <th class="table-th text-white text-center">INV.MIN</th>
+                                    <!-- <th class="table-th text-white text-center">STOCK</th>
+                                    <th class="table-th text-white text-center">INV.MIN</th> -->
                                     <th class="table-th text-white text-center">IMAGEN</th>
-                                    <th class="table-th text-white text-center">ACTIONS</th>
+                                    <th class="table-th text-white text-center">ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,8 +40,8 @@
                                     <td><h6 class="text-center">{{$product->barcode}}</h6></td>
                                     <td><h6 class="text-center">{{$product->category}}</h6></td>
                                     <td><h6 class="text-center">{{$product->price}}</h6></td>
-                                    <td><h6 class="text-center">{{$product->stock}}</h6></td>
-                                    <td><h6 class="text-center">{{$product->alerts}}</h6></td>
+                                    <!-- <td><h6 class="text-center">{{$product->stock}}</h6></td>
+                                    <td><h6 class="text-center">{{$product->alerts}}</h6></td> -->
                                     
                                     <td class="text-center">
                                         <span>
@@ -48,17 +50,20 @@
                                         </span>
                                     </td>
                                     <td class="text-center">
+                                    @can('Producto_Editar')
                                         <a href="javascript:void(0)"
                                         wire:click.prevent="Edit({{$product->id}})"
                                         class="btn btn-dark mtmobile" title="Edit">
                                             <i class="fas fa-edit"></i>
                                         </a>
-
+                                    @endcan
+                                    @can('Producto_Eliminar')
                                         <a href="javascript:void(0)" 
                                         onclick="Confirm('{{$product->id}}')"
                                         class="btn btn-dark " title="Delete">
                                             <i class="fas fa-trash"></i>
                                         </a>
+                                        @endcan
                                     </td>
                                 </tr>
                                 @endforeach

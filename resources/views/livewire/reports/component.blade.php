@@ -1,3 +1,4 @@
+@can('Vista_Reportes')
 <div class="row sales layout-top-spacing">
 
     <div class="col-sm-12">
@@ -53,9 +54,9 @@
                                     Consultar
                                 </button>
                                 
-                                    <a class="btn btn-dark btn-block {{count($data) <1 ? 'disabled' : '' }}"
+                                    <!-- <a class="btn btn-dark btn-block {{count($data) <1 ? 'disabled' : '' }}"
                                     href="{{url('report/pdf' . '/' . $userId . '/' . $reportType . '/'
-                                    . $dateFrom . '/' . $dateTo) }}" target="_blank">Generar PDF</a>
+                                    . $dateFrom . '/' . $dateTo) }}" target="_blank">Generar PDF</a> -->
 
                                     <a class="btn btn-dark btn-block {{count($data) <1 ? 'disabled' : '' }}"
                                     href="{{url('report/excel' . '/' . $userId . '/' . $reportType . '/'
@@ -177,3 +178,4 @@
         })
     })
 </script>
+@endcan

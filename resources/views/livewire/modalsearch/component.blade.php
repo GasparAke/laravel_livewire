@@ -5,7 +5,7 @@
 
                 <div class="input-group">
                     <input type="text" wire:model="search" id="modal-search-input" 
-                    placeholder="Puedes buscar por nombre del producto, codigo de barras">
+                    placeholder="Puedes buscar por nombre del producto, codigo de barras" class="w-50">
                     <div class="input-group-prepend">
                         <span class="input-group-text input-gp">
                             <i class="fas fa-search"></i>
@@ -21,7 +21,7 @@
                             <thead class="text-white" style="background: #3B3F5C">
                                 <tr>
                                     <th width="4%"></th>
-                                    <th class="table-th text-left text-white">DESCRPCION</th>
+                                    <th class="table-th text-left text-white">DESCRIPCIÓN</th>
                                     <th width="13%" class="table-th text-center text-white">PRECIO</th>
                                     <th class="table-th text-center text-white">CATEGORÍA</th>
                                     <th class="table-th text-center text-white">

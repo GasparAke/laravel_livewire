@@ -191,7 +191,7 @@ class Users extends Component
             $sales = Sale::where('user_id', $user->id)->count();
             if($sales > 0) 
             {
-                $this->emit('user-withsales', 'No es posible eliminar el suuario porque tiene ventas registradas');
+                $this->emit('user-withsales', 'No es posible eliminar el usuario porque tiene ventas registradas');
             } else {
                 $user->delete();
                 $this->resetUI();

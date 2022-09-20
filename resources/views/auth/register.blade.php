@@ -1,3 +1,4 @@
+@can('Registrar')
 @extends('layouts.app')
 
 @section('content')
@@ -10,6 +11,7 @@
                 <div class="card-body">
                 <img src="assets/img/pizza.jpeg" class="img-circle" alt="AdminLTE Logo" 
       style="width: 30%; display:block; margin:auto;">
+      <br>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -77,3 +79,4 @@
     </div>
 </div>
 @endsection
+@endcan

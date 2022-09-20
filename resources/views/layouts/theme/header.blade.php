@@ -1,15 +1,11 @@
 
-
-<img src="assets/img/pizza.jpeg" class="img-circle" alt="AdminLTE Logo" 
-      style="width: 30%; display:block; margin:auto;">
-
 <div class="header-container  fixed-top">
     <header class="header navbar navbar-expand-sm">
         <ul class="navbar-item flex-row">
             <li class="nav-item theme-logo">
                 <a class="text-primary" href="home">
                     <img src="assets/img/pizza.jpeg" class="navbar-logo" width="70px;" height="70px;" alt="logo">
-                    <b  style="font-size: 15px; color:#3B3f">Pizzería Estrella</b>
+                    <b  style="font-size: 15px; color:#3B3f">Pizzería Estrella XD</b>
                 </a>
             </li>
         </ul>
@@ -28,13 +24,13 @@
                         <div class="media mx-auto">
                             <img src="assets/img/user.jpg" class="img-fluid mr-2" alt="avatar">
                             <div class="media-body">
-                                <h5>XD</h5>
+                                <h5>Yazzareth</h5>
                                 <p>Admin</p>
                             </div>
                         </div>
                     </div>
                     <div class="dropdown-item">
-                        <a href="user_profile.html">
+                        <a href="">
                             <i class="fas fa-user"></i> <span>Mi Perfil</span>
                         </a>
                     </div>
@@ -48,7 +44,7 @@
                         <i class="fas fa-sign-out-alt"></i>
                      
                         
-                        <span>Log Out</span>
+                        <span>Cerrar Sesión</span>
                     </a>
                     <form action="{{ route('logout') }}" method="POST" id="logout-form">
                         @csrf

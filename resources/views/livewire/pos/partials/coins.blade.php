@@ -1,7 +1,7 @@
 <div class="row mt-3">
     <div class="col-sm-12">
         <div class="connect-sorting">
-            <h5 class="text-center mb-2">DENOMINACIONES</h5>
+            <h5 class="text-center mb-2">Tipos de dinero</h5>
             <div class="container">
                 <div class="row">
                     @foreach($denominations as $d)
@@ -44,8 +44,8 @@
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-6">
                                 @if($efectivo >= $total && $total > 0)
-                                <button wire:click.prevent="saveSale" class="btn btn-dark btn-md btn-block">
-                                    GUARDAR
+                                <button wire:click.prevent="saveSale"  class="btn btn-dark btn-md btn-block">
+                                    VENDER
                                 </button>
                                 @endif
                             </div>

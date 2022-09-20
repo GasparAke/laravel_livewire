@@ -9,6 +9,9 @@ use App\Models\SaleDetails;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
+use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
+use Mike42\Escpos\Printer;
+use Mike42\Escpos\EscposImage;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ExportController extends Controller
@@ -53,4 +56,5 @@ class ExportController extends Controller
         $reportName = 'Reporte de Ventas_' . uniqid() . '.xlsx';
         return Excel::download(new SalesExport($userId, $reportType, $dateFrom, $dateTo),$reportName);
     } 
+    
 }

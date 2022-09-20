@@ -84,7 +84,7 @@
                         15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path>
                         </svg>
                         </div>
-                        <span>Graficas</span>
+                        <span>GRAFICAS</span>
                     </div>
                 </a>
             </li>
@@ -98,7 +98,7 @@
                         7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22
                         7l-3-3m-3.5 3.5L19 4"></path></svg>
                         </div>
-                        <span>ROLES</span>
+                        <span>TIPOS DE USUARIO</span>
                     </div>
                 </a>
             </li>
@@ -125,7 +125,7 @@
                         stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 
                         8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                         </div>
-                        <span>ASIGNAR</span>
+                        <span>ASIGNAR PERMISOS</span>
                     </div>
                 </a>
             </li>
@@ -140,6 +140,20 @@
                         21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         </div>
                         <span>USUARIOS</span>
+                    </div>
+                </a>
+            </li>
+            <li class="">
+                <a href="{{url('Dash')}}" class="menu-toggle" data-active="false">
+                    <div class="base-menu">
+                        <div class="base-icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24 
+                        " fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                        stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 
+                        15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
+                        </div>
+                        <span>GRAFICAS</span>
                     </div>
                 </a>
             </li>

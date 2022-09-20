@@ -1,3 +1,4 @@
+@can('Roles_Vista')
 <div class="row sales layout-top-spacing">
     <div class="col-sm-12">
         <div class="widget widget-chart-one">
@@ -21,8 +22,8 @@
                             <thead class="text-white" style="background: #3B3F5C">
                                 <tr>
                                     <th class="table-th text-white">ID</th>
-                                    <th class="table-th text-white text-center">DESCRPCION</th>
-                                    <th class="table-th text-white tex-center">ACCIONES</th>
+                                    <th class="table-th text-white text-center">DESCRIPCIÓN</th>
+                                    <th class="table-th text-white text-center">ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -108,3 +109,4 @@
     
     }
 </script>
+@endcan

@@ -2,19 +2,22 @@
 
 @section('content')
 <div class="container">
+<br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                
+            <img src="assets/img/pizza.jpeg" class="img-circle" alt="AdminLTE Logo" 
+      style="width: 30%; display:block; margin:auto;">
 
-                <div class="card-body">
+                <div class="card-body text-center">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Iniciaste Sesión!') }}
                 </div>
             </div>
         </div>
